@@ -1,24 +1,20 @@
 #include <iostream>
 #include "lib.h"
-
-
 using namespace std;
 
-
 int main() {
-    int b=0;
-    char A[10][20], B[20];
-    for(int i=0; i<10; i++) {
-            cin >> A[i];
-
+    int a=0;
+    float num=0;
+    cin >> a;
+    if(a<=0){
+        return 0;
     }
-
-        cin >> B;
-    if (posizione(A,B,b)){
-        cout << b << endl;
-    }else{
-        cout << "non presente" << endl;
-    }
-
+    float numeri[a];
+        for(int i=0; i<a; i++){
+            num=0;
+            cin >> num;
+            numeri[i]=num;
+        }
+    cout << maggiore(numeri,a) << endl;
     return 0;
 }
